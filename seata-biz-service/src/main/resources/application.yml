@@ -1,0 +1,11 @@
+server:
+  port: 8010
+
+spring:
+  application:
+    name: biz-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/order?useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
