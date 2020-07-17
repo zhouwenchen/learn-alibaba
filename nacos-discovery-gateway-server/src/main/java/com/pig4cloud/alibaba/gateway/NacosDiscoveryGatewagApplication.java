@@ -20,9 +20,21 @@ package com.pig4cloud.alibaba.gateway;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import tk.mybatis.spring.annotation.MapperScan;
 
+/**
+ * 测试案例
+ * http://localhost:8054/provider/demo?name=abc&token=123
+ * 先指向sql脚本
+ * 启动 nacos-discovery-gateway-server 和 nacos-discovery-provider 项目
+ * 已经注释了 application.yml 中的路由规则
+ * 项目启动先加载数据库中的路由策略
+ *
+ * @author zhouwenchen
+ */
 @EnableDiscoveryClient
 @SpringBootApplication
+@MapperScan(value = "com.pig4cloud.alibaba.gateway.mapper")
 public class NacosDiscoveryGatewagApplication {
 
     public static void main(String[] args) {

@@ -7,16 +7,18 @@ spring:
         server-addr: 127.0.0.1:8848
         metadata:
           name: lengleng
-    gateway:
-      routes:
-        - id: nacos-discovery-provider
-          uri: lb://nacos-discovery-provider
-          predicates:
-            - Path=/provider/**
-          filters:
-            - StripPrefix=1
-
+#    gateway:
+#      routes:
+#        - id: nacos-discovery-provider
+#          uri: lb://nacos-discovery-provider
+#          predicates:
+#            - Path=/provider/**
+#          filters:
+#            - StripPrefix=1
+  datasource:
+    url: jdbc:mysql://localhost:3306/nacos?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: 123
+    driver-class-name: com.mysql.jdbc.Driver
 server:
   port: 8054
-
-

@@ -4,10 +4,10 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848,127.0.0.1:8849,127.0.0.1:8850
+        server-addr: 127.0.0.1:8848 # ,127.0.0.1:8849,127.0.0.1:8850
         metadata:
           name: provider
       config:
-        server-addr: 127.0.0.1:8848,127.0.0.1:8849,127.0.0.1:8850
+        server-addr: 127.0.0.1:8848 # ,127.0.0.1:8849,127.0.0.1:8850
         group: DEFAULT_GROUP
         file-extension: properties
