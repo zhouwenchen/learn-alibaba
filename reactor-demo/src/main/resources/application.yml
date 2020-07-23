@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: nacos-discovery-consumer-webflux
+server:
+  port: 8053
+
+
