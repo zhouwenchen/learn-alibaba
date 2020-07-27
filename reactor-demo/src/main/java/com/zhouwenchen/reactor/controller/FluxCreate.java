@@ -7,7 +7,6 @@ import java.util.Random;
 
 public class FluxCreate {
 
-
     /**
      * 测试未通过
      */
@@ -26,7 +25,6 @@ public class FluxCreate {
                 ));
             }
         });
-
         create.subscribe(System.out::println);
     }
 

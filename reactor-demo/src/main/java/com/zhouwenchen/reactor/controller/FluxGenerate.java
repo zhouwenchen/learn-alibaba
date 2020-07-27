@@ -36,8 +36,14 @@ public class FluxGenerate {
         generate.subscribe(System.out::println);
     }
 
+    public static void test3(){
+        List<Integer> list = Arrays.asList(1, 2, 3, 4, 5);
+        Flux.fromIterable(list).subscribe(System.out::println);
+    }
+
     public static void main(String[] args) {
 //        test1();
-        test2();
+//        test2();
+        test3();
     }
 }
